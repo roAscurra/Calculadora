@@ -28,6 +28,10 @@ partial class Form1
     /// </summary>
     private void InitializeComponent()
     {
+        this.btnUno = new System.Windows.Forms.Button();
+        this.btnDos = new System.Windows.Forms.Button();
+        this.btnTres = new System.Windows.Forms.Button();
+        this.btnCuatro = new System.Windows.Forms.Button();
         this.btnCinco = new System.Windows.Forms.Button();
         this.btnSeis = new System.Windows.Forms.Button();
         this.btnSiete = new System.Windows.Forms.Button();
@@ -36,12 +40,57 @@ partial class Form1
         this.btnMultiplicar = new System.Windows.Forms.Button();
         this.btnDividir = new System.Windows.Forms.Button();
         this.btnRestar = new System.Windows.Forms.Button();
+        this.btnSumar = new System.Windows.Forms.Button();
         this.btnResultado = new System.Windows.Forms.Button();
         this.btnPunto = new System.Windows.Forms.Button();
 
         
         this.SuspendLayout();
 
+        // btnUno
+        // 
+        this.btnUno.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+        this.btnUno.Location = new System.Drawing.Point(13, 249);
+        this.btnUno.Name = "btnUno";
+        this.btnUno.Size = new System.Drawing.Size(45, 45);
+        this.btnUno.TabIndex = 1;
+        this.btnUno.Text = "1";
+        this.btnUno.UseVisualStyleBackColor = true;
+        //this.btnUno.Click += new System.EventHandler(this.agregarNumero);
+        // 
+        // btnDos
+        // 
+        this.btnDos.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+        this.btnDos.Location = new System.Drawing.Point(70, 249);
+        this.btnDos.Name = "btnDos";
+        this.btnDos.Size = new System.Drawing.Size(45, 45);
+        this.btnDos.TabIndex = 2;
+        this.btnDos.Text = "2";
+        this.btnDos.UseVisualStyleBackColor = true;
+        //this.btnDos.Click += new System.EventHandler(this.agregarNumero);
+        // 
+        // btnTres
+        // 
+        this.btnTres.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+        this.btnTres.Location = new System.Drawing.Point(127, 249);
+        this.btnTres.Name = "btnTres";
+        this.btnTres.Size = new System.Drawing.Size(45, 45);
+        this.btnTres.TabIndex = 3;
+        this.btnTres.Text = "3";
+        this.btnTres.UseVisualStyleBackColor = true;
+        //this.btnTres.Click += new System.EventHandler(this.agregarNumero);
+        // 
+        // btnCuatro
+        // 
+        this.btnCuatro.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+        this.btnCuatro.Location = new System.Drawing.Point(13, 190);
+        this.btnCuatro.Name = "btnCuatro";
+        this.btnCuatro.Size = new System.Drawing.Size(45, 45);
+        this.btnCuatro.TabIndex = 4;
+        this.btnCuatro.Text = "4";
+        this.btnCuatro.UseVisualStyleBackColor = true;
+        //this.btnCuatro.Click += new System.EventHandler(this.agregarNumero);
+        // 
         // btnCinco
         // 
         this.btnCinco.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -138,7 +187,18 @@ partial class Form1
         this.btnRestar.UseVisualStyleBackColor = true;
         this.btnRestar.Click += new System.EventHandler(this.clickOperador);
         // 
-
+        // btnSumar
+            // 
+            this.btnSumar.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnSumar.Location = new System.Drawing.Point(214, 190);
+            this.btnSumar.Name = "btnSumar";
+            this.btnSumar.Size = new System.Drawing.Size(45, 45);
+            this.btnSumar.TabIndex = 17;
+            this.btnSumar.Tag = "+";
+            this.btnSumar.Text = "+";
+            this.btnSumar.UseVisualStyleBackColor = true;
+            this.btnSumar.Click += new System.EventHandler(this.clickOperador);
+            // 
         // btnResultado
         // 
         this.btnResultado.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -169,6 +229,10 @@ partial class Form1
         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         this.ClientSize = new System.Drawing.Size(331, 365);
         
+        this.Controls.Add(this.btnCuatro);
+        this.Controls.Add(this.btnTres);
+        this.Controls.Add(this.btnDos);
+        this.Controls.Add(this.btnUno);
         this.Controls.Add(this.btnCinco);
         this.Controls.Add(this.btnSeis);
         this.Controls.Add(this.btnSiete);
@@ -176,6 +240,7 @@ partial class Form1
         this.Controls.Add(this.btnNueve);
         this.Controls.Add(this.btnMultiplicar);
         this.Controls.Add(this.btnDividir);
+        this.Controls.Add(this.btnSumar);
         this.Controls.Add(this.btnResultado);
         this.Controls.Add(this.btnRestar);
         this.Controls.Add(this.btnPunto);
@@ -188,7 +253,10 @@ partial class Form1
     }
 
     #endregion
-    
+    private System.Windows.Forms.Button btnUno;
+    private System.Windows.Forms.Button btnDos;
+    private System.Windows.Forms.Button btnTres;
+    private System.Windows.Forms.Button btnCuatro;
     private System.Windows.Forms.Button btnCinco;
     private System.Windows.Forms.Button btnSeis;
     private System.Windows.Forms.Button btnSiete;
@@ -197,6 +265,7 @@ partial class Form1
     private System.Windows.Forms.Button btnMultiplicar;
     private System.Windows.Forms.Button btnDividir;
     private System.Windows.Forms.Button btnRestar;
+    private System.Windows.Forms.Button btnSumar;
     private System.Windows.Forms.Button btnResultado;
     private System.Windows.Forms.Button btnPunto;
     private System.Windows.Forms.TextBox txtResultado;
