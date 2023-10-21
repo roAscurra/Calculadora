@@ -33,6 +33,12 @@ partial class Form1
         this.btnSiete = new System.Windows.Forms.Button();
         this.btnOcho = new System.Windows.Forms.Button();
         this.btnNueve = new System.Windows.Forms.Button();
+        this.btnMultiplicar = new System.Windows.Forms.Button();
+        this.btnDividir = new System.Windows.Forms.Button();
+        this.btnRestar = new System.Windows.Forms.Button();
+        this.btnResultado = new System.Windows.Forms.Button();
+        this.btnPunto = new System.Windows.Forms.Button();
+
         
         this.SuspendLayout();
 
@@ -94,8 +100,69 @@ partial class Form1
         this.btnNueve.UseVisualStyleBackColor = true;
         //this.btnNueve.Click += new System.EventHandler(this.agregarNumero);
         // 
-        
+        // btnMultiplicar
         // 
+        this.btnMultiplicar.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+        this.btnMultiplicar.Location = new System.Drawing.Point(271, 131);
+        this.btnMultiplicar.Name = "btnMultiplicar";
+        this.btnMultiplicar.Size = new System.Drawing.Size(45, 45);
+        this.btnMultiplicar.TabIndex = 16;
+        this.btnMultiplicar.Tag = "x";
+        this.btnMultiplicar.Text = "x";
+        this.btnMultiplicar.UseVisualStyleBackColor = true;
+        this.btnMultiplicar.Click += new System.EventHandler(this.clickOperador);
+        // 
+
+        // btnDividir
+        // 
+        this.btnDividir.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+        this.btnDividir.Location = new System.Drawing.Point(214, 131);
+        this.btnDividir.Name = "btnDividir";
+        this.btnDividir.Size = new System.Drawing.Size(45, 45);
+        this.btnDividir.TabIndex = 15;
+        this.btnDividir.Tag = "∕";
+        this.btnDividir.Text = "∕";
+        this.btnDividir.UseVisualStyleBackColor = true;
+        this.btnDividir.Click += new System.EventHandler(this.clickOperador);
+        // 
+
+        // btnRestar
+        // 
+        this.btnRestar.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+        this.btnRestar.Location = new System.Drawing.Point(271, 190);
+        this.btnRestar.Name = "btnRestar";
+        this.btnRestar.Size = new System.Drawing.Size(45, 45);
+        this.btnRestar.TabIndex = 18;
+        this.btnRestar.Tag = "-";
+        this.btnRestar.Text = "-";
+        this.btnRestar.UseVisualStyleBackColor = true;
+        this.btnRestar.Click += new System.EventHandler(this.clickOperador);
+        // 
+
+        // btnResultado
+        // 
+        this.btnResultado.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+        this.btnResultado.Location = new System.Drawing.Point(214, 249);
+        this.btnResultado.Name = "btnResultado";
+        this.btnResultado.Size = new System.Drawing.Size(102, 45);
+        this.btnResultado.TabIndex = 19;
+        this.btnResultado.Text = "=";
+        this.btnResultado.UseVisualStyleBackColor = true;
+        this.btnResultado.Click += new System.EventHandler(this.btnResultado_Click);
+        //
+
+        // btnPunto
+        // 
+        this.btnPunto.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+        this.btnPunto.Location = new System.Drawing.Point(127, 310);
+        this.btnPunto.Name = "btnPunto";
+        this.btnPunto.Size = new System.Drawing.Size(45, 45);
+        this.btnPunto.TabIndex = 22;
+        this.btnPunto.Text = ".";
+        this.btnPunto.UseVisualStyleBackColor = true;
+        this.btnPunto.Click += new System.EventHandler(this.btnPunto_Click);
+        // 
+
         // Form1
         // 
         this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -107,7 +174,11 @@ partial class Form1
         this.Controls.Add(this.btnSiete);
         this.Controls.Add(this.btnOcho);
         this.Controls.Add(this.btnNueve);
-        
+        this.Controls.Add(this.btnMultiplicar);
+        this.Controls.Add(this.btnDividir);
+        this.Controls.Add(this.btnResultado);
+        this.Controls.Add(this.btnRestar);
+        this.Controls.Add(this.btnPunto);
         this.MaximizeBox = false;
         this.Name = "Form1";
         this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -123,6 +194,12 @@ partial class Form1
     private System.Windows.Forms.Button btnSiete;
     private System.Windows.Forms.Button btnOcho;
     private System.Windows.Forms.Button btnNueve;
+    private System.Windows.Forms.Button btnMultiplicar;
+    private System.Windows.Forms.Button btnDividir;
+    private System.Windows.Forms.Button btnRestar;
+    private System.Windows.Forms.Button btnResultado;
+    private System.Windows.Forms.Button btnPunto;
+    private System.Windows.Forms.TextBox txtResultado;
 
         
 }
