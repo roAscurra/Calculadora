@@ -51,6 +51,7 @@ public partial class Form1 : Form
     {
         if (currentExpression.Length == 0 || !currentExpression.EndsWith(".") && !currentExpression.Contains("."))
         {
+            //Comprueba si la expresión actual está vacía o no termina con un punto decimal
             currentExpression += ".";
             txtResultado.Text = currentExpression;
         }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/AW0pGXHhX0dhkfHw5Oh/sRWk+/mJ2raC/2I0bm7Dd0eHwlvyQzgBKuVbs3XbuKq/KQvAm26RdbWJUc8YF+BOw==",
+  "dgSpecHash": "uo/WsH2RpysKRQ+R4PnsNut8sJed1chFUV02zhCS+/E6FpzJsaJG/u9WTyQTvyMTUCcZSiyV31zfH9/RHKd/GA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\unoco\\OneDrive\\Escritorio\\Calculadora\\Calculadora.csproj",
+  "projectFilePath": "C:\\Users\\unoco\\OneDrive\\Escritorio\\Calculadora\\Calculadora\\Calculadora.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
