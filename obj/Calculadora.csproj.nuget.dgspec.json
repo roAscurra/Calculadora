@@ -1,31 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\unoco\\OneDrive\\Escritorio\\Calculadora\\Calculadora\\Calculadora.csproj": {}
+    "C:\\Users\\florg\\Documents\\Facultad\\Laboratorio 3\\Parcial Calcu\\Calculadora\\Calculadora.csproj": {}
   },
   "projects": {
-    "C:\\Users\\unoco\\OneDrive\\Escritorio\\Calculadora\\Calculadora\\Calculadora.csproj": {
+    "C:\\Users\\florg\\Documents\\Facultad\\Laboratorio 3\\Parcial Calcu\\Calculadora\\Calculadora.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\unoco\\OneDrive\\Escritorio\\Calculadora\\Calculadora\\Calculadora.csproj",
+        "projectUniqueName": "C:\\Users\\florg\\Documents\\Facultad\\Laboratorio 3\\Parcial Calcu\\Calculadora\\Calculadora.csproj",
         "projectName": "Calculadora",
-        "projectPath": "C:\\Users\\unoco\\OneDrive\\Escritorio\\Calculadora\\Calculadora\\Calculadora.csproj",
-        "packagesPath": "C:\\Users\\unoco\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\unoco\\OneDrive\\Escritorio\\Calculadora\\Calculadora\\obj\\",
+        "projectPath": "C:\\Users\\florg\\Documents\\Facultad\\Laboratorio 3\\Parcial Calcu\\Calculadora\\Calculadora.csproj",
+        "packagesPath": "C:\\Users\\florg\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\florg\\Documents\\Facultad\\Laboratorio 3\\Parcial Calcu\\Calculadora\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\unoco\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\florg\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0-windows"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

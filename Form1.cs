@@ -7,8 +7,47 @@ public partial class Form1 : Form
 
     public Form1()
     {
-        InitializeComponent();  
+        // Configurar la configuración regional de Windows para usar el punto (.) como separador decimal
+        var cultureInfo = new System.Globalization.CultureInfo("en-US");
+        cultureInfo.NumberFormat.NumberDecimalSeparator = ".";
+        Thread.CurrentThread.CurrentCulture = cultureInfo;
+        Thread.CurrentThread.CurrentUICulture = cultureInfo;
+        InitializeComponent();
     }
+
+
+    private void clickOperador(object sender, EventArgs e)
+    {
+        Button button = (Button)sender;
+
+        if (button.Text == "-" && string.IsNullOrEmpty(currentExpression))
+        {
+            currentExpression += "0" + button.Text; // Agrega un 0 antes del '-' para manejar números negativos.
+        }
+        else if (IsOperator(button.Text[0]) && !string.IsNullOrEmpty(currentExpression) && !IsOperator(currentExpression[currentExpression.Length - 1]) && currentExpression[currentExpression.Length - 1] != '(')
+        {
+            currentExpression += button.Text;
+        }
+        else if (button.Text == "(" || button.Text == ")" || button.Text != "-" && !string.IsNullOrEmpty(currentExpression) && !IsOperator(currentExpression[currentExpression.Length - 1]))
+        {
+            currentExpression += button.Text;
+        }
+
+        txtResultado.Text = currentExpression.Replace("0-", "-");
+    }
+
+    private void agregarNumero(object sender, EventArgs e)
+    {
+        Button button = (Button)sender;
+        currentExpression += button.Text;
+        txtResultado.Text = currentExpression.Replace("0-", "-");
+    }
+
+    private bool IsOperator(char c)
+    {
+        return (c == '+' || c == '-' || c == 'x' || c == '/');
+    }
+
     private int Precedence(char op)
     {
         if (op == '+' || op == '-')
@@ -36,7 +75,7 @@ public partial class Form1 : Form
             case 'x':
                 result = a * b;
                 break;
-               case '/':
+            case '/':
                 if (b == 0)
                 {
                     throw new DivideByZeroException();
