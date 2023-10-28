@@ -86,6 +86,74 @@ public partial class Form1 : Form
 
         numberStack.Push(result);
     }
+    private void btnBorrar_Click(object sender, EventArgs e)
+    {
+        if (currentExpression.Length > 0)
+        {
+            currentExpression = currentExpression.Substring(0, currentExpression.Length - 1);
+            txtResultado.Text = currentExpression.Replace("0-", "-");
+        }
+    }
+    private void btnBorrarTodo_Click(object sender, EventArgs e)
+    {
+        currentExpression = "";
+        txtResultado.Text = "0";
+    }
+    private void btnResultado_Click(object sender, EventArgs e)
+    {
+        try
+        {
+            double result = EvaluateExpression(currentExpression);
+            txtResultado.Text = result.ToString();
+            currentExpression = result.ToString();
+        }
+        catch (Exception)
+        {
+            // Si la expresión no es válida, no hagas nada y simplemente regresa sin mostrar un mensaje de error.
+            return;
+        }
+    }
+    private double ParseDouble(string s)
+    {
+        double result = 0.0;
+        double fraction = 0.1;
+        bool isFraction = false;
+        bool isNegative = false;
+
+        foreach (char c in s)
+        {
+            if (c == '-')
+            {
+                isNegative = true;
+            }
+            else if (c == '.')
+            {
+                isFraction = true;
+            }
+            else
+            {
+                int digit = c - '0';
+                if (isFraction)
+                {
+                    result += digit * fraction;
+                    fraction *= 0.1;
+                }
+                else
+                {
+                    result = result * 10 + digit;
+                }
+            }
+        }
+
+        if (isNegative)
+        {
+            result = -result;
+        }
+
+        return result;
+    }
+    private double EvaluateExpression(string expression)
+    { return 0;}
     private void btnPunto_Click(object sender, EventArgs e)
     {
         if (currentExpression.Length == 0 || !currentExpression.EndsWith(".") && !currentExpression.Contains("."))

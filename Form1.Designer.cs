@@ -225,7 +225,7 @@ partial class Form1
         this.btnResultado.TabIndex = 19;
         this.btnResultado.Text = "=";
         this.btnResultado.UseVisualStyleBackColor = true;
-        this.btnResultado.Click += new System.EventHandler(this.btnResultado_Click);
+        //this.btnResultado.Click += new System.EventHandler(this.btnResultado_Click);
         //
 
         // btnPunto

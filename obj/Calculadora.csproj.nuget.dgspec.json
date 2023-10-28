@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\florg\\Documents\\Facultad\\Laboratorio 3\\Parcial Calcu\\Calculadora\\Calculadora.csproj": {}
+    "C:\\Users\\Usuario\\Desktop\\Parcial 2\\Calculadora\\Calculadora.csproj": {}
   },
   "projects": {
-    "C:\\Users\\florg\\Documents\\Facultad\\Laboratorio 3\\Parcial Calcu\\Calculadora\\Calculadora.csproj": {
+    "C:\\Users\\Usuario\\Desktop\\Parcial 2\\Calculadora\\Calculadora.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\florg\\Documents\\Facultad\\Laboratorio 3\\Parcial Calcu\\Calculadora\\Calculadora.csproj",
+        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\Parcial 2\\Calculadora\\Calculadora.csproj",
         "projectName": "Calculadora",
-        "projectPath": "C:\\Users\\florg\\Documents\\Facultad\\Laboratorio 3\\Parcial Calcu\\Calculadora\\Calculadora.csproj",
-        "packagesPath": "C:\\Users\\florg\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\florg\\Documents\\Facultad\\Laboratorio 3\\Parcial Calcu\\Calculadora\\obj\\",
+        "projectPath": "C:\\Users\\Usuario\\Desktop\\Parcial 2\\Calculadora\\Calculadora.csproj",
+        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Usuario\\Desktop\\Parcial 2\\Calculadora\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\florg\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0-windows"
