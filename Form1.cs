@@ -48,6 +48,10 @@ public partial class Form1 : Form
         return (c == '+' || c == '-' || c == 'x' || c == '/');
     }
 
+    private bool IsDigit(char c)
+        {
+            return (c >= '0' && c <= '9') || c == '.';
+        }
     private int Precedence(char op)
     {
         if (op == '+' || op == '-')
@@ -153,7 +157,91 @@ public partial class Form1 : Form
         return result;
     }
     private double EvaluateExpression(string expression)
-    { return 0;}
+    { 
+        var numberStack = new Stack<double>();
+            var operatorStack = new Stack<char>();
+
+            int i = 0;
+            while (i < expression.Length)
+            {
+                char c = expression[i];
+
+                if (c == ' ')
+                {
+                    i++;
+                    continue;
+                }
+
+                if (IsDigit(c) || (c == '-' && (i == 0 || IsOperator(expression[i - 1]))))
+                {
+                    string numStr = "";
+                    while (i < expression.Length && (IsDigit(expression[i]) || expression[i] == '.'))
+                    {
+                        numStr += expression[i];
+                        i++;
+                    }
+                    i--;
+
+                    double num = ParseDouble(numStr);
+                    numberStack.Push(num);
+                }
+                else if (c == '(')
+                {
+                    operatorStack.Push(c);
+                }
+                else if (c == ')')
+                {
+                    while (operatorStack.Count > 0 && operatorStack.Peek() != '(')
+                    {
+                        ComputeTopOperation(numberStack, operatorStack);
+                    }
+                    operatorStack.Pop(); // Pop '('
+                }
+                else if (IsOperator(c))
+                {
+                    while (operatorStack.Count > 0 && Precedence(operatorStack.Peek()) >= Precedence(c))
+                    {
+                        ComputeTopOperation(numberStack, operatorStack);
+                    }
+                    operatorStack.Push(c);
+                }
+                else
+                {
+                    throw new Exception("Carácter no válido: " + c);
+                }
+
+                i++;
+            }
+
+            while (operatorStack.Count > 0)
+            {
+                ComputeTopOperation(numberStack, operatorStack);
+            }
+
+            if (numberStack.Count == 1 && operatorStack.Count == 0)
+            {
+                return numberStack.Pop();
+            }
+            else
+            {
+                throw new Exception("Expresión inválida");
+            }
+        }
+    private void btnSigno_Click(object sender, EventArgs e)
+        {
+            if (currentExpression.Length > 0)
+            {
+                if (currentExpression[0] == '-')
+                {
+                    currentExpression = currentExpression.Substring(1);
+                }
+                else
+                {
+                    currentExpression = "-" + currentExpression;
+                }
+                txtResultado.Text = currentExpression.Replace("0-", "-");
+            }
+        }
     private void btnPunto_Click(object sender, EventArgs e)
     {
         if (currentExpression.Length == 0 || !currentExpression.EndsWith(".") && !currentExpression.Contains("."))
