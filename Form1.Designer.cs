@@ -62,7 +62,7 @@ partial class Form1
         this.btnCero.TabIndex = 21;
         this.btnCero.Text = "0";
         this.btnCero.UseVisualStyleBackColor = true;
-        //this.btnCero.Click += new System.EventHandler(this.agregarNumero);
+        this.btnCero.Click += new System.EventHandler(this.agregarNumero);
 
         // btnUno
         // 
@@ -73,7 +73,7 @@ partial class Form1
         this.btnUno.TabIndex = 1;
         this.btnUno.Text = "1";
         this.btnUno.UseVisualStyleBackColor = true;
-        //this.btnUno.Click += new System.EventHandler(this.agregarNumero);
+        this.btnUno.Click += new System.EventHandler(this.agregarNumero);
         // 
         // btnDos
         // 
@@ -84,7 +84,7 @@ partial class Form1
         this.btnDos.TabIndex = 2;
         this.btnDos.Text = "2";
         this.btnDos.UseVisualStyleBackColor = true;
-        //this.btnDos.Click += new System.EventHandler(this.agregarNumero);
+        this.btnDos.Click += new System.EventHandler(this.agregarNumero);
         // 
         // btnTres
         // 
@@ -95,7 +95,7 @@ partial class Form1
         this.btnTres.TabIndex = 3;
         this.btnTres.Text = "3";
         this.btnTres.UseVisualStyleBackColor = true;
-        //this.btnTres.Click += new System.EventHandler(this.agregarNumero);
+        this.btnTres.Click += new System.EventHandler(this.agregarNumero);
         // 
         // btnCuatro
         // 
@@ -106,7 +106,7 @@ partial class Form1
         this.btnCuatro.TabIndex = 4;
         this.btnCuatro.Text = "4";
         this.btnCuatro.UseVisualStyleBackColor = true;
-        //this.btnCuatro.Click += new System.EventHandler(this.agregarNumero);
+        this.btnCuatro.Click += new System.EventHandler(this.agregarNumero);
         // 
         // btnCinco
         // 
@@ -117,7 +117,7 @@ partial class Form1
         this.btnCinco.TabIndex = 5;
         this.btnCinco.Text = "5";
         this.btnCinco.UseVisualStyleBackColor = true;
-        //this.btnCinco.Click += new System.EventHandler(this.agregarNumero);
+        this.btnCinco.Click += new System.EventHandler(this.agregarNumero);
         // 
 
         // btnSeis
@@ -129,7 +129,7 @@ partial class Form1
         this.btnSeis.TabIndex = 6;
         this.btnSeis.Text = "6";
         this.btnSeis.UseVisualStyleBackColor = true;
-        //this.btnSeis.Click += new System.EventHandler(this.agregarNumero);
+        this.btnSeis.Click += new System.EventHandler(this.agregarNumero);
         // 
 
         // btnSiete
@@ -141,7 +141,7 @@ partial class Form1
         this.btnSiete.TabIndex = 7;
         this.btnSiete.Text = "7";
         this.btnSiete.UseVisualStyleBackColor = true;
-        //this.btnSiete.Click += new System.EventHandler(this.agregarNumero);
+        this.btnSiete.Click += new System.EventHandler(this.agregarNumero);
         // 
 
         // btnOcho
@@ -153,7 +153,7 @@ partial class Form1
         this.btnOcho.TabIndex = 8;
         this.btnOcho.Text = "8";
         this.btnOcho.UseVisualStyleBackColor = true;
-        //this.btnOcho.Click += new System.EventHandler(this.agregarNumero);
+        this.btnOcho.Click += new System.EventHandler(this.agregarNumero);
 
         // btnNueve
         // 
@@ -164,7 +164,7 @@ partial class Form1
         this.btnNueve.TabIndex = 9;
         this.btnNueve.Text = "9";
         this.btnNueve.UseVisualStyleBackColor = true;
-        //this.btnNueve.Click += new System.EventHandler(this.agregarNumero);
+        this.btnNueve.Click += new System.EventHandler(this.agregarNumero);
         // 
         // btnMultiplicar
         // 
@@ -225,7 +225,7 @@ partial class Form1
         this.btnResultado.TabIndex = 19;
         this.btnResultado.Text = "=";
         this.btnResultado.UseVisualStyleBackColor = true;
-        //this.btnResultado.Click += new System.EventHandler(this.btnResultado_Click);
+        this.btnResultado.Click += new System.EventHandler(this.btnResultado_Click);
         //
 
         // btnPunto
@@ -250,7 +250,7 @@ partial class Form1
         this.btnParentesis1.Tag = ")";
         this.btnParentesis1.Text = ")";
         this.btnParentesis1.UseVisualStyleBackColor = true;
-        //this.btnParentesis1.Click += new System.EventHandler(this.clickOperador);
+        this.btnParentesis1.Click += new System.EventHandler(this.clickOperador);
         // 
         // btnParentesis2
         // 
@@ -262,7 +262,7 @@ partial class Form1
         this.btnParentesis2.Tag = "(";
         this.btnParentesis2.Text = "(";
         this.btnParentesis2.UseVisualStyleBackColor = true;
-        //this.btnParentesis2.Click += new System.EventHandler(this.clickOperador); 
+        this.btnParentesis2.Click += new System.EventHandler(this.clickOperador); 
         // 
         // btnBorrar
         // 
@@ -273,7 +273,7 @@ partial class Form1
         this.btnBorrar.TabIndex = 10;
         this.btnBorrar.Text = "Borrar";
         this.btnBorrar.UseVisualStyleBackColor = true;
-        //this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
+        this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
         // 
         // btnBorrarTodo
         // 
@@ -284,7 +284,7 @@ partial class Form1
         this.btnBorrarTodo.TabIndex = 11;
         this.btnBorrarTodo.Text = "Borrar Todo";
         this.btnBorrarTodo.UseVisualStyleBackColor = true;
-        //this.btnBorrarTodo.Click += new System.EventHandler(this.btnBorrarTodo_Click);
+        this.btnBorrarTodo.Click += new System.EventHandler(this.btnBorrarTodo_Click);
         // 
         // btnSigno
         // 
@@ -295,7 +295,7 @@ partial class Form1
         this.btnSigno.TabIndex = 20;
         this.btnSigno.Text = "+/-";
         this.btnSigno.UseVisualStyleBackColor = true;
-        //this.btnSigno.Click += new System.EventHandler(this.btnSigno_Click);
+        this.btnSigno.Click += new System.EventHandler(this.btnSigno_Click);
 
 
         // Form1

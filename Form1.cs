@@ -35,23 +35,17 @@ public partial class Form1 : Form
 
         txtResultado.Text = currentExpression.Replace("0-", "-");
     }
-
     private void agregarNumero(object sender, EventArgs e)
     {
         Button button = (Button)sender;
         currentExpression += button.Text;
         txtResultado.Text = currentExpression.Replace("0-", "-");
     }
-
     private bool IsOperator(char c)
     {
         return (c == '+' || c == '-' || c == 'x' || c == '/');
     }
 
-    private bool IsDigit(char c)
-        {
-            return (c >= '0' && c <= '9') || c == '.';
-        }
     private int Precedence(char op)
     {
         if (op == '+' || op == '-')
@@ -156,9 +150,13 @@ public partial class Form1 : Form
 
         return result;
     }
-    private double EvaluateExpression(string expression)
-    { 
-        var numberStack = new Stack<double>();
+        private bool IsDigit(char c)
+        {
+            return (c >= '0' && c <= '9') || c == '.';
+        }
+           private double EvaluateExpression(string expression)
+        {
+            var numberStack = new Stack<double>();
             var operatorStack = new Stack<char>();
 
             int i = 0;
@@ -227,21 +225,6 @@ public partial class Form1 : Form
                 throw new Exception("Expresión inválida");
             }
         }
-    private void btnSigno_Click(object sender, EventArgs e)
-        {
-            if (currentExpression.Length > 0)
-            {
-                if (currentExpression[0] == '-')
-                {
-                    currentExpression = currentExpression.Substring(1);
-                }
-                else
-                {
-                    currentExpression = "-" + currentExpression;
-                }
-                txtResultado.Text = currentExpression.Replace("0-", "-");
-            }
-        }
     private void btnPunto_Click(object sender, EventArgs e)
     {
         if (currentExpression.Length == 0 || !currentExpression.EndsWith(".") && !currentExpression.Contains("."))
@@ -251,5 +234,19 @@ public partial class Form1 : Form
             txtResultado.Text = currentExpression;
         }
     }
-
+    private void btnSigno_Click(object sender, EventArgs e)
+    {
+        if (currentExpression.Length > 0)
+        {
+            if (currentExpression[0] == '-')
+            {
+                currentExpression = currentExpression.Substring(1);
+            }
+            else
+            {
+                currentExpression = "-" + currentExpression;
+            }
+            txtResultado.Text = currentExpression.Replace("0-", "-");
+        }
+    }
 }
