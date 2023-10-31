@@ -1,5 +1,5 @@
-### Calculadora
-Calculadora que permite realizar operaciones básicas (resta, suma, multiplicación y división).
+# Calculadora
+Permite realizar operaciones básicas (resta, suma, multiplicación y división).
 ## Requisitos Previos
 
 Para comenzar con el desarrollo y ejecución de este proyecto, asegúrate de tener instalados los siguientes componentes en tu sistema:
