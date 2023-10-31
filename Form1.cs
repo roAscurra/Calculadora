@@ -1,4 +1,4 @@
-namespace Calculadora;
+namespace Calculadora{
 
 public partial class Form1 : Form
 {
@@ -14,7 +14,12 @@ public partial class Form1 : Form
         Thread.CurrentThread.CurrentUICulture = cultureInfo;
         InitializeComponent();
     }
-
+    private void agregarNumero(object sender, EventArgs e)
+    {
+        Button button = (Button)sender;
+        currentExpression += button.Text;
+        txtResultado.Text = currentExpression.Replace("0-", "-");
+    }
 
     private void clickOperador(object sender, EventArgs e)
     {
@@ -33,12 +38,6 @@ public partial class Form1 : Form
             currentExpression += button.Text;
         }
 
-        txtResultado.Text = currentExpression.Replace("0-", "-");
-    }
-    private void agregarNumero(object sender, EventArgs e)
-    {
-        Button button = (Button)sender;
-        currentExpression += button.Text;
         txtResultado.Text = currentExpression.Replace("0-", "-");
     }
     private bool IsOperator(char c)
@@ -249,4 +248,5 @@ public partial class Form1 : Form
             txtResultado.Text = currentExpression.Replace("0-", "-");
         }
     }
+}
 }

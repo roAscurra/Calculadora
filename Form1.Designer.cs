@@ -28,6 +28,7 @@ partial class Form1
     /// </summary>
     private void InitializeComponent()
     {
+        this.txtResultado = new System.Windows.Forms.TextBox();
         this.btnUno = new System.Windows.Forms.Button();
         this.btnDos = new System.Windows.Forms.Button();
         this.btnTres = new System.Windows.Forms.Button();
@@ -51,7 +52,19 @@ partial class Form1
         this.btnSigno = new System.Windows.Forms.Button();
 
         this.SuspendLayout();
-
+            // 
+            // txtResultado
+            // 
+            this.txtResultado.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtResultado.Location = new System.Drawing.Point(13, 13);
+            this.txtResultado.MaxLength = 21;
+            this.txtResultado.Multiline = true;
+            this.txtResultado.Name = "txtResultado";
+            this.txtResultado.ReadOnly = true;
+            this.txtResultado.Size = new System.Drawing.Size(303, 45);
+            this.txtResultado.TabIndex = 0;
+            this.txtResultado.Text = "0";
+            this.txtResultado.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
         // 
         // btnCero
         // 
@@ -325,6 +338,7 @@ partial class Form1
         this.Controls.Add(this.btnBorrar);
         this.Controls.Add(this.btnBorrarTodo);
         this.Controls.Add(this.btnSigno);
+            this.Controls.Add(this.txtResultado);
 
 
 
