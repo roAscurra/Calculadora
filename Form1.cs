@@ -75,6 +75,7 @@ public partial class Form1 : Form
             case '/':
                 if (b == 0)
                 {
+                    MessageBox.Show("No es posible dividir entre cero.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     throw new DivideByZeroException();
                 }
                 result = a / b;
@@ -106,6 +107,7 @@ public partial class Form1 : Form
         }
         catch (Exception)
         {
+            MessageBox.Show("El formato usado no es válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             // Si la expresión no es válida, no hagas nada y simplemente regresa sin mostrar un mensaje de error.
             return;
         }
