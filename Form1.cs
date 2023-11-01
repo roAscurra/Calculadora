@@ -19,14 +19,18 @@ namespace Calculadora
         {
             Button button = (Button)sender;
             currentExpression += button.Text;
-            txtResultado.Text = currentExpression.Replace("0-", "-");
+            if(currentExpression.Contains("0-")){
+                txtResultado.Text = currentExpression.Replace("0-", "-");
+            }else{
+                txtResultado.Text = currentExpression;
+            }
         }
 
         private void clickOperador(object sender, EventArgs e)
         {
             Button button = (Button)sender;
 
-            if (button.Text == "-" && string.IsNullOrEmpty(currentExpression) || currentExpression.EndsWith("("))
+            if (button.Text == "-" && (string.IsNullOrEmpty(currentExpression) || currentExpression.EndsWith("(") || currentExpression.EndsWith("(-")))
             {
                 currentExpression += "0" + button.Text; // Agrega un 0 antes del '-' para manejar números negativos.
             }
@@ -47,8 +51,11 @@ namespace Calculadora
             {
                 currentExpression += button.Text;
             }
-
+            if(currentExpression.Contains("0-")){
             txtResultado.Text = currentExpression.Replace("0-", "-");
+            }else{
+                txtResultado.Text = currentExpression;
+            }
         }
 
         private bool IsOperator(char c)
@@ -100,7 +107,11 @@ namespace Calculadora
             if (currentExpression.Length > 0)
             {
                 currentExpression = currentExpression.Substring(0, currentExpression.Length - 1);
-                txtResultado.Text = currentExpression.Replace("0-", "-");
+                if(currentExpression.Contains("0-")){
+                    txtResultado.Text = currentExpression.Replace("0-", "-");
+                }else{
+                    txtResultado.Text = currentExpression;
+                }
             }
         }
         private void btnBorrarTodo_Click(object sender, EventArgs e)
@@ -258,7 +269,11 @@ namespace Calculadora
                 {
                     currentExpression = "-" + currentExpression;
                 }
-                txtResultado.Text = currentExpression.Replace("0-", "-");
+                if(currentExpression.Contains("0-")){
+                    txtResultado.Text = currentExpression.Replace("0-", "-");
+                }else{
+                    txtResultado.Text = currentExpression;
+                }
             }
         }
     }
