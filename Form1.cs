@@ -26,7 +26,7 @@ namespace Calculadora
         {
             Button button = (Button)sender;
 
-            if (button.Text == "-" && string.IsNullOrEmpty(currentExpression))
+            if (button.Text == "-" && string.IsNullOrEmpty(currentExpression) || currentExpression.EndsWith("("))
             {
                 currentExpression += "0" + button.Text; // Agrega un 0 antes del '-' para manejar números negativos.
             }
