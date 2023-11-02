@@ -253,27 +253,25 @@ namespace Calculadora
             if (currentExpression.Length == 0 || (char.IsDigit(currentExpression[currentExpression.Length - 1]) && !currentExpression.EndsWith(".")))
             {
                 currentExpression += ".";
-                txtResultado.Text = currentExpression;
+                txtResultado.Text = currentExpression.Replace("0-","-");
             }
         }
         private void btnSigno_Click(object sender, EventArgs e)
         {
-            if (currentExpression.Length > 0)
+       if (currentExpression.Length > 0)
+        {
+            if (currentExpression.StartsWith("0-"))
             {
-                if (currentExpression[0] == '-')
-                {
-                    currentExpression = currentExpression.Substring(1);
-                }
-                else
-                {
-                    currentExpression = "-" + currentExpression;
-                }
-                if(currentExpression.Contains("0-")){
-                    txtResultado.Text = currentExpression.Replace("0-", "-");
-                }else{
-                    txtResultado.Text = currentExpression;
-                }
+                currentExpression = currentExpression.Substring(2);
             }
+            else
+            {
+                currentExpression = "0-" + currentExpression;
+            }
+
+            txtResultado.Text = currentExpression;
         }
+    }
+
     }
 }
