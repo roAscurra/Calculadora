@@ -293,7 +293,7 @@ partial class Form1
         this.btnBorrarTodo.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
         this.btnBorrarTodo.Location = new System.Drawing.Point(13, 71);
         this.btnBorrarTodo.Name = "btnBorrarTodo";
-        this.btnBorrarTodo.Size = new System.Drawing.Size(150, 45);
+        this.btnBorrarTodo.Size = new System.Drawing.Size(160, 45);
         this.btnBorrarTodo.TabIndex = 11;
         this.btnBorrarTodo.Text = "Borrar Todo";
         this.btnBorrarTodo.UseVisualStyleBackColor = true;
@@ -316,6 +316,22 @@ partial class Form1
         this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         this.ClientSize = new System.Drawing.Size(331, 365);
+
+        //Colores
+        this.btnResultado.BackColor = Color.FromArgb(255, 255, 204);
+        this.btnBorrar.BackColor = Color.FromArgb(255, 255, 204);
+        this.btnBorrarTodo.BackColor = Color.FromArgb(255, 255, 204);
+        this.btnSumar.BackColor = Color.FromArgb(255, 255, 204);
+        this.btnRestar.BackColor = Color.FromArgb(255, 255, 204);
+        this.btnMultiplicar.BackColor = Color.FromArgb(255, 255, 204);
+        this.btnDividir.BackColor = Color.FromArgb(255, 255, 204);
+        this.btnParentesis1.BackColor = Color.FromArgb(255, 255, 204);
+        this.btnParentesis2.BackColor = Color.FromArgb(255, 255, 204);
+        this.txtResultado.BackColor = Color.White;
+        this.BackColor = Color.Orange;
+
+
+
 
         this.Controls.Add(this.btnCuatro);
         this.Controls.Add(this.btnTres);
