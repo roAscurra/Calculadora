@@ -250,9 +250,8 @@ namespace Calculadora
         }
         private void btnPunto_Click(object sender, EventArgs e)
         {
-            if (currentExpression.Length == 0 || !currentExpression.EndsWith(".") && !currentExpression.Contains("."))
+            if (currentExpression.Length == 0 || (char.IsDigit(currentExpression[currentExpression.Length - 1]) && !currentExpression.EndsWith(".")))
             {
-                //Comprueba si la expresión actual está vacía o no termina con un punto decimal
                 currentExpression += ".";
                 txtResultado.Text = currentExpression;
             }
